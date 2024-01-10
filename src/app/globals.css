@@ -2,26 +2,152 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::-webkit-scrollbar {
+  width: 10px; /* Tamaño de la barra de desplazamiento */
+  background-color: #efefef; /* Color de fondo de la barra de desplazamiento */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Handle on hover */
+::-webkit-scrollbar-thumb {
+  background-color: #f87171; /* Color del "thumb" de la barra de desplazamiento, cambia este color como lo necesites */
+  border-radius: 6px; /* Bordes redondeados para el "thumb" */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f87171; /* Color del "thumb" al pasar el mouse sobre él */
+}
+
+.hero {
+  background-image: url(/images/bg-texturas.png);
+  background-size: contain;
+  background-position: top center;
+  /* background-repeat: no-repeat; */
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.6;
+  position: absolute;
+  z-index: -1;
+}
+
+.footer {
+  background-color: #ef0000;
+  background-image: url(/images/footer/texturasFooter.png);
+  background-size: cover;
+}
+
+.btn {
+  border-radius: 50px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem 5rem;
+  flex-shrink: 0;
+  background: linear-gradient(93deg, #ef0000 -10.26%, #fde256 84.41%);
+  box-shadow: -1px 23px 50px 0 rgba(185, 44, 44, 0.46);
+  margin-bottom: 0.5rem;
+}
+
+.text-animation {
+  width: 100%;
+  background: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    93deg,
+    #ef0000 0%,
+    #f87171 20%,
+    #eeca17 30%,
+    #f87171 40%,
+    #ef0000 80%,
+    #f1cb0b 95%
+  );
+  -webkit-background-clip: text;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes textShine {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 100% 50%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.text-shadow {
+  text-shadow: 0 7px 6px rgba(0, 0, 0, 0.25);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bubbles-container {
+  position: relative;
+  z-index: -1; /* Asegura que el contenedor esté detrás de otros elementos */
+  overflow: hidden;
+}
+
+.bubble {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -30px;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  z-index: -1; /* Asegura que cada burbuja esté detrás de otros elementos */
+  opacity: 0.7;
+}
+
+@keyframes moveUpwards {
+  0% {
+    transform: translateY(
+      100vh
+    ); /* Comienza justo fuera de la pantalla en la parte inferior */
+  }
+  100% {
+    transform: translateY(
+      -100vh
+    ); /* Termina fuera de la pantalla en la parte superior */
+  }
+}
+
+@keyframes zigzag {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(25px);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+  75% {
+    transform: translateX(25px);
+  }
+}
+
+.radio-custom {
+  /* Estilos personalizados para tus botones de radio */
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #ef4444; /* rojo-500 */
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 150ms ease-in-out;
+}
+
+.radio-custom:checked {
+  background-color: #ef4444; /* rojo-500 */
+}
+
+.radio-custom:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5); /* sombra para el rojo-500 */
 }
