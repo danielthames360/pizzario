@@ -1,6 +1,7 @@
 import { SucursalesCard } from './SucursalesCard'
 import { useMapContext } from '@/MapContext'
 import { RadioCity } from './RadioCity'
+import Script from 'next/script'
 
 export const SucursalesList = () => {
   const {
@@ -22,9 +23,14 @@ export const SucursalesList = () => {
             onClick={() => setActiveBranch(sucursal)}
             className='max-w-sm cursor-pointer rounded overflow-hidden shadow-lg bg-white mb-2 sm:mb-4 p-4 flex flex-col lg:hover:scale-105 transition-all hover:transition'
           >
-            <SucursalesCard {...sucursal} />
+            <SucursalesCard branch={sucursal} />
           </div>
         ))}
+
+      <Script
+        src='https://www.fbgcdn.com/embedder/js/ewm2.js'
+        strategy='lazyOnload'
+      />
     </div>
   )
 }

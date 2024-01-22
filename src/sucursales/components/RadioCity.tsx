@@ -7,7 +7,7 @@ export const RadioCity = () => {
   const [selectedCity, setSelectedCity] = useState<string>('SCZ')
 
   const onSelectedCityChanged = (e: ChangeEvent<HTMLInputElement>) => {
-    setBranches(sucursales.filter((s) => s.ciudad === e.target.value))
+    setBranches(sucursales.filter((s) => s.city === e.target.value))
     setSelectedCity(e.target.value)
   }
 

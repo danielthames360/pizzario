@@ -1,5 +1,6 @@
 'use client'
 import { Map, SucursalesList } from '@/sucursales/components'
+import Script from 'next/script'
 export const Sucursales = () => {
   return (
     <>

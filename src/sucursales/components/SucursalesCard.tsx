@@ -2,15 +2,21 @@ import Image from 'next/image'
 import { Sucursal } from '../../sucursales'
 import {
   FaMapMarkerAlt,
-  FaPhone,
   FaClock,
   FaCalendarAlt,
   FaWhatsapp
 } from 'react-icons/fa'
 import { PedirYaCard } from './PedirYaCard'
 
-export const SucursalesCard = (branch: Sucursal) => {
+export const SucursalesCard = ({
+  branch,
+  fromMap
+}: {
+  branch: Sucursal
+  fromMap?: boolean
+}) => {
   const whatsappUrl = `https://wa.me/${branch.phone}`
+  const perdirYaUrl = `https://www.restotech-bo.com/ordering/restaurant/menu?restaurant_uid=${branch.sucursalId}`
 
   return (
     <div>
@@ -41,26 +47,19 @@ export const SucursalesCard = (branch: Sucursal) => {
           <FaWhatsapp className='inline text-red-400 mr-2 ' />
           <span className='text-gray-700 text-base'>{branch.phone}</span>
         </a>
-
-        {/* <div className='flex items-center'>
-          <span className='text-sm'>Contactarse</span>
-          <a
-            href={whatsappUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='text-green-500 hover:text-green-600'
-          >
-            <Image
-              src='/images/icons/icons8-whatsapp-50.png'
-              alt='Whatsapp Icon'
-              width={50}
-              height={50}
-            />
-          </a>
-        </div> */}
       </div>
       <div className='flex justify-between items-center mt-4'>
-        <PedirYaCard />
+        {fromMap ? (
+          <a
+            href={perdirYaUrl}
+            className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer'
+            rel='noopener noreferrer'
+          >
+            Pedir Ya!
+          </a>
+        ) : (
+          <PedirYaCard id={branch.sucursalId} />
+        )}
         {branch.distance && (
           <span className='inline-block bg-red-100 rounded-full px-3 py-1 text-sm font-semibold text-red-600'>
             {branch.distance.toFixed(2)} Km

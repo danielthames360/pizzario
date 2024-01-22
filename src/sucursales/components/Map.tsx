@@ -75,7 +75,7 @@ function Map() {
       // Filtrar por ciudad
       const sucursalesFiltradas = [
         ...sucursalesConDistancia.filter(
-          (s) => s.ciudad === sucursalesConDistancia[0].ciudad
+          (s) => s.city === sucursalesConDistancia[0].city
         )
       ]
 
@@ -124,7 +124,7 @@ function Map() {
             }}
             onCloseClick={() => setActiveBranch(null)}
           >
-            <SucursalesCard {...activeBranch} />
+            <SucursalesCard branch={activeBranch} fromMap={true} />
           </InfoWindow>
         )}
       </GoogleMap>

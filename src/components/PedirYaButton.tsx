@@ -13,16 +13,19 @@ const scrollDown = () => {
 export const PedirYaButton = () => {
   const { sortedBranches } = useMapContext()
 
+  if (!sortedBranches || sortedBranches.length === 0) {
+    return (
+      <button className='btn text-shadow' onClick={scrollDown}>
+        !Pedir Ya!
+      </button>
+    )
+  }
+
   return (
     <button
       className='btn text-shadow'
-      onClick={
-        !sortedBranches || sortedBranches.length === 0
-          ? scrollDown
-          : () => {
-              alert('Ready for order')
-            }
-      }
+      data-glf-cuid='d1feca7c-ffe6-4a02-ac9d-1eca3fb78dab'
+      data-glf-ruid={sortedBranches && sortedBranches[0].sucursalId}
     >
       !Pedir Ya!
     </button>

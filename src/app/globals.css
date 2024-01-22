@@ -45,6 +45,12 @@
   background: linear-gradient(93deg, #ef0000 -10.26%, #fde256 84.41%);
   box-shadow: -1px 23px 50px 0 rgba(185, 44, 44, 0.46);
   margin-bottom: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: -1px 23px 50px 0 rgba(251, 107, 107, 0.46);
+  transform: scale(1.05);
 }
 
 .text-animation {
