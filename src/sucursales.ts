@@ -54,7 +54,7 @@ export const sucursales: Sucursal[] = [
         latitude: -17.7942094,
         longitude: -63.1801055,
         city: 'SCZ',
-        sucursalId: "",
+        sucursalId: "47c4a2bf-3b20-4ca8-bf3e-d80816d6a4e8",
     },
     {
         name: "Sucursal Bush",
@@ -98,7 +98,7 @@ export const sucursales: Sucursal[] = [
         latitude: -17.7686796,
         longitude: -63.1997761,
         city: 'SCZ',
-        sucursalId: "",
+        sucursalId: "a51c8bbb-1719-4725-9c96-e9d7df434077",
     },
     {
         name: "Sucursal Lujan",
@@ -106,8 +106,8 @@ export const sucursales: Sucursal[] = [
         phone: "62240413",
         hours: "15:00 PM - 22:00 PM",
         days: "Lun, Mar, Mie, Jue, Vie, Sab, Dom",
-        latitude: -17.6817331,
-        longitude: -63.1494184,
+        latitude: -17.7440181,
+        longitude: -63.1165658,
         city: 'SCZ',
         sucursalId: "347d5ed6-6dd4-4452-b16b-1d0e12cc9491",
     },
@@ -143,7 +143,7 @@ export const sucursales: Sucursal[] = [
         latitude: -17.7693019,
         longitude: -63.1671098,
         city: 'SCZ',
-        sucursalId: "844732c2-893d-4175-bf46-fccffdee4845",
+        sucursalId: "844732c2-893d-4175-bf46-fccffdee4845"
     },
     {
         name: "Sucursal Pampa de la isla",
@@ -165,7 +165,7 @@ export const sucursales: Sucursal[] = [
         latitude: -17.7908805,
         longitude: -63.1968085,
         city: 'SCZ',
-        sucursalId: "",
+        sucursalId: "5505e62d-94fe-4bdb-b8bf-05e28987bd73",
     },
     {
         name: "Sucursal Plan 3000",
@@ -176,7 +176,7 @@ export const sucursales: Sucursal[] = [
         latitude: -17.8369842,
         longitude: -63.1277421,
         city: 'SCZ',
-        sucursalId: "",
+        sucursalId: "1612cd7b-19e8-48e6-a16b-0ca342ae0021",
     },
     {
         name: "Sucursal Radial 27",
@@ -187,7 +187,7 @@ export const sucursales: Sucursal[] = [
         latitude: -17.7375226,
         longitude: -63.1726112,
         city: 'SCZ',
-        sucursalId: "",
+        sucursalId: "28c54083-c4db-4c07-8aa7-b70cd443ff74",
     },
     {
         name: "Sucursal San Aurelio",
@@ -202,14 +202,14 @@ export const sucursales: Sucursal[] = [
     },
     {
         name: "Sucursal San Miguel",
-        address: "Calle Claudio Aliaga, Av. Montenegro y, La Paz",
+        address: "Calle Claudio Aliaga, Av. Montenegro, La Paz",
         phone: "75832626",
         hours: "16:00 PM - 22:45 PM",
         days: "Lun, Mar, Mie, Jue, Vie, Sab, Dom",
         latitude: -16.5426562,
         longitude: -68.080545,
         city: 'LP',
-        sucursalId: "",
+        sucursalId: "6e3b1bbc-e307-4379-9558-15ce6b130f17",
     },
     {
         name: "Sucursal Santos Dumont",
@@ -231,7 +231,7 @@ export const sucursales: Sucursal[] = [
         latitude: -17.8341703,
         longitude: -63.1846459,
         city: 'SCZ',
-        sucursalId: "",
+        sucursalId: "08a36efb-304c-4123-a363-2525bb926311",
     },
     {
         name: "Sucursal Sevilla",
@@ -242,7 +242,7 @@ export const sucursales: Sucursal[] = [
         latitude: -17.6817331,
         longitude: -63.1494184,
         city: 'SCZ',
-        sucursalId: "",
+        sucursalId: "e6d4d57b-61ff-45d6-a079-c47ea1f98af3",
     },
     {
         name: "Sucursal Villa 1ero de Mayo",
