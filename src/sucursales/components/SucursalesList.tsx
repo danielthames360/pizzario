@@ -1,7 +1,6 @@
 import { SucursalesCard } from './SucursalesCard'
 import { useMapContext } from '@/MapContext'
 import { RadioCity } from './RadioCity'
-import Script from 'next/script'
 
 export const SucursalesList = () => {
   const {
@@ -26,11 +25,6 @@ export const SucursalesList = () => {
             <SucursalesCard branch={sucursal} />
           </div>
         ))}
-
-      <Script
-        src='https://www.fbgcdn.com/embedder/js/ewm2.js'
-        strategy='lazyOnload'
-      />
     </div>
   )
 }

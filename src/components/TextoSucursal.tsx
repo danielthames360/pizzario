@@ -1,5 +1,3 @@
-'use client'
-
 import { useMapContext } from '@/MapContext'
 
 export const TextoSucursal = () => {

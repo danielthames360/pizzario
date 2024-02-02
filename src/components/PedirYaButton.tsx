@@ -1,6 +1,5 @@
-'use client'
-
 import { useMapContext } from '@/MapContext'
+import Script from 'next/script'
 
 const scrollDown = () => {
   window.scrollBy({
@@ -13,21 +12,27 @@ const scrollDown = () => {
 export const PedirYaButton = () => {
   const { sortedBranches } = useMapContext()
 
-  if (!sortedBranches || sortedBranches.length === 0) {
+  if (sortedBranches == null || sortedBranches.length === 0) {
     return (
       <button className='btn text-shadow' onClick={scrollDown}>
-        !Pedir Ya!
+        Pedir Ya!
       </button>
     )
   }
 
   return (
-    <button
-      className='btn text-shadow'
-      data-glf-cuid='d1feca7c-ffe6-4a02-ac9d-1eca3fb78dab'
-      data-glf-ruid={sortedBranches && sortedBranches[0].sucursalId}
-    >
-      !Pedir Ya!
-    </button>
+    <>
+      <button
+        className='btn text-shadow'
+        data-glf-cuid='d1feca7c-ffe6-4a02-ac9d-1eca3fb78dab'
+        data-glf-ruid={sortedBranches[0].sucursalId}
+      >
+        Pedir Ya!
+      </button>
+      <Script
+        src='https://www.fbgcdn.com/embedder/js/ewm2.js'
+        strategy='lazyOnload'
+      />
+    </>
   )
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import { useMapContext } from '@/MapContext'
 import { sucursales } from '@/sucursales'
 import { ChangeEvent, useState } from 'react'
