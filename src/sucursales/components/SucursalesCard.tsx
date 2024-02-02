@@ -7,6 +7,7 @@ import {
   FaWhatsapp
 } from 'react-icons/fa'
 import { PedirYaCard } from './PedirYaCard'
+import { clickButtonPedirYa } from '@/utils/clickButtonPedirYa'
 
 export const SucursalesCard = ({
   branch,
@@ -16,7 +17,6 @@ export const SucursalesCard = ({
   fromMap?: boolean
 }) => {
   const whatsappUrl = `https://wa.me/${branch.phone}`
-  const perdirYaUrl = `https://www.restotech-bo.com/ordering/restaurant/menu?restaurant_uid=${branch.sucursalId}`
 
   return (
     <div>
@@ -50,13 +50,12 @@ export const SucursalesCard = ({
       </div>
       <div className='flex justify-between items-center mt-4'>
         {fromMap ? (
-          <a
-            href={perdirYaUrl}
+          <button
             className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer'
-            rel='noopener noreferrer'
+            onClick={() => clickButtonPedirYa(branch.sucursalId)}
           >
             Pedir Ya!
-          </a>
+          </button>
         ) : (
           <PedirYaCard id={branch.sucursalId} />
         )}

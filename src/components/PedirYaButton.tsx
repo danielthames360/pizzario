@@ -1,5 +1,8 @@
+'use client'
+
 import { useMapContext } from '@/MapContext'
-import Script from 'next/script'
+import { clickButtonPedirYa } from '@/utils/clickButtonPedirYa'
+import { useEffect } from 'react'
 
 const scrollDown = () => {
   window.scrollBy({
@@ -11,6 +14,12 @@ const scrollDown = () => {
 
 export const PedirYaButton = () => {
   const { sortedBranches } = useMapContext()
+
+  useEffect(() => {
+    // Esta función no hace nada por sí misma, pero al tener `sortedBranches`
+    // como una dependencia, el componente se volverá a renderizar cuando
+    // `sortedBranches` cambie.
+  }, [sortedBranches])
 
   if (sortedBranches == null || sortedBranches.length === 0) {
     return (
@@ -24,15 +33,10 @@ export const PedirYaButton = () => {
     <>
       <button
         className='btn text-shadow'
-        data-glf-cuid='d1feca7c-ffe6-4a02-ac9d-1eca3fb78dab'
-        data-glf-ruid={sortedBranches[0].sucursalId}
+        onClick={() => clickButtonPedirYa(sortedBranches[0].sucursalId)}
       >
         Pedir Ya!
       </button>
-      <Script
-        src='https://www.fbgcdn.com/embedder/js/ewm2.js'
-        strategy='lazyOnload'
-      />
     </>
   )
 }

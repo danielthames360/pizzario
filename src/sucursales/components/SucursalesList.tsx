@@ -16,9 +16,9 @@ export const SucursalesList = () => {
       {(!sortedBranches || sortedBranches.length === 0) && <RadioCity />}
 
       {branches &&
-        branches.map((sucursal, index) => (
+        branches.map((sucursal) => (
           <div
-            key={index}
+            key={sucursal.sucursalId}
             onClick={() => setActiveBranch(sucursal)}
             className='max-w-sm cursor-pointer rounded overflow-hidden shadow-lg bg-white mb-2 sm:mb-4 p-4 flex flex-col lg:hover:scale-105 transition-all hover:transition'
           >

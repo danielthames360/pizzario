@@ -1,6 +1,5 @@
 'use client'
 
-import { sucursales } from '@/sucursales'
 import { calculateDistance, mapStyles } from '@/utils'
 import {
   GoogleMap,
@@ -8,11 +7,11 @@ import {
   Marker,
   useJsApiLoader
 } from '@react-google-maps/api'
-import { memo, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { SucursalesCard } from './SucursalesCard'
 import { useMapContext } from '@/MapContext'
 
-function Map() {
+export const Map = () => {
   const {
     activeBranch,
     setActiveBranch,
@@ -35,31 +34,14 @@ function Map() {
     lat: number
     lng: number
   } | null>(null)
+
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ''
   })
 
-  useEffect(() => {
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        function (position) {
-          setCurrentLocation({
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          })
-        },
-        function (error) {
-          console.error('Error Code = ' + error.code + ' - ' + error.message)
-        }
-      )
-    } else {
-      console.error('Geolocation is not supported by this browser.')
-    }
-  }, [])
-
-  useEffect(() => {
+  const ordenarSucursalesPorDistancia = useCallback(() => {
     if (currentLocation) {
-      const sucursalesConDistancia = sucursales.map((sucursal) => ({
+      const sucursalesConDistancia = originBranches.map((sucursal) => ({
         ...sucursal,
         distance: calculateDistance(
           currentLocation.lat,
@@ -69,20 +51,37 @@ function Map() {
         )
       }))
 
-      // Ordena las sucursales por distancia
       sucursalesConDistancia.sort((a, b) => a.distance - b.distance)
-
-      // Filtrar por ciudad
-      const sucursalesFiltradas = [
-        ...sucursalesConDistancia.filter(
-          (s) => s.city === sucursalesConDistancia[0].city
-        )
-      ]
-
-      // Actualiza tu estado con las sucursales ordenadas
+      const sucursalesFiltradas = sucursalesConDistancia.filter(
+        (s) => s.city === sucursalesConDistancia[0].city
+      )
       setSortedBranches(sucursalesFiltradas)
     }
-  }, [currentLocation, setSortedBranches])
+  }, [currentLocation, originBranches, setSortedBranches])
+
+  useEffect(() => {
+    if ('geolocation' in navigator) {
+      const watchId = navigator.geolocation.watchPosition(
+        (position) => {
+          setCurrentLocation({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          })
+        },
+        (error) => {
+          console.error('Error Code = ' + error.code + ' - ' + error.message)
+        }
+      )
+
+      return () => navigator.geolocation.clearWatch(watchId)
+    } else {
+      console.error('Geolocation is not supported by this browser.')
+    }
+  }, [])
+
+  useEffect(() => {
+    ordenarSucursalesPorDistancia()
+  }, [ordenarSucursalesPorDistancia])
 
   if (!isLoaded) {
     return <div>Loading...</div>
@@ -131,5 +130,3 @@ function Map() {
     </div>
   )
 }
-
-export default memo(Map)

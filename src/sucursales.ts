@@ -8,7 +8,7 @@ export interface Sucursal {
     latitude: number;
     longitude: number;
     city: string;
-    sucursalId?: string
+    sucursalId: string
 }
 
 export const sucursales: Sucursal[] = [

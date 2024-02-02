@@ -1,5 +1,3 @@
-import Script from 'next/script'
-
 export const PedirYaCard = ({ id }: { id: string | undefined }) => {
   if (!id) return null
   return (
@@ -11,11 +9,6 @@ export const PedirYaCard = ({ id }: { id: string | undefined }) => {
       >
         Pedir Ya!
       </button>
-
-      <Script
-        src='https://www.fbgcdn.com/embedder/js/ewm2.js'
-        strategy='lazyOnload'
-      />
     </>
   )
 }
