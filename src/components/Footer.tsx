@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa6'
 
@@ -43,6 +44,10 @@ export const Footer = () => {
       <div className='bg-black text-center p-4'>
         <p className='w-10/12 text-white mx-auto leading-5 sm:text-lg'>
           ©{new Date().getFullYear()} - Pizza Rio
+          <br />
+          <Link href={'/privacy'} className='underline hover:text-gray-300'>
+            Política de privacidad
+          </Link>
           <br />
           Todos los derechos reservados
         </p>
