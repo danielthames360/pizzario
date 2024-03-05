@@ -10,7 +10,7 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb {
   background-color: #c61a1a; /* Color del "thumb" de la barra de desplazamiento, cambia este color como lo necesites */
-  border-radius: 5px; /* Bordes redondeados para el "thumb" */
+  border-radius: 4px; /* Bordes redondeados para el "thumb" */
 }
 
 ::-webkit-scrollbar-thumb:hover {

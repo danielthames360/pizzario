@@ -81,7 +81,7 @@ export const Hero = () => {
           sm:w-[40px] sm:h-[60px] sm:bottom-1 sm:-left-3
           md:w-[50px] md:h-[70px] md:-left-4
           lg:w-[60px] lg:h-[80px] lg:-left-5
-          xl:w-[70px] xl:h-[90px] xl:-left-6'
+          xl:w-[80px] xl:h-[110px] xl:-left-6'
             />
           </div>
         </div>
