@@ -10,6 +10,7 @@ export const Hero = () => {
       <div
         className='hero h-full bg-left 
       sm:bg-[url(/images/background.png)] sm:bg-center'
+      
       ></div>
 
       <div
@@ -44,6 +45,7 @@ export const Hero = () => {
             <div className='flex flex-col gap-2 sm:gap-0'>
               <Image
                 src={'/images/slogan.png'}
+                priority
                 width={350}
                 height={350}
                 alt='slogan'
@@ -78,6 +80,7 @@ export const Hero = () => {
               alt='deco'
               width={50}
               height={50}
+              priority
               className='absolute animationPizza bottom-10 -left-3 deco-animation
           sm:w-[40px] sm:h-[60px] sm:bottom-1 sm:-left-3
           md:w-[50px] md:h-[70px] md:-left-4
@@ -105,6 +108,7 @@ export const Hero = () => {
           width={85}
           height={85}
           alt='plant'
+          priority
           className='absolute -bottom-16 left-2
         sm:w-[70px] sm:-bottom-11 sm:left-1 
         md:left-24
@@ -117,6 +121,7 @@ export const Hero = () => {
           width={110}
           height={110}
           alt='plant'
+          priority
           className='absolute -bottom-12 right-0
         sm:w-[60px] sm:-bottom-[3rem] sm:left-[19rem]
         md:left-1/2 md:-translate-x-1/2
@@ -127,6 +132,7 @@ export const Hero = () => {
           src={'/images/redPlantBig.png'}
           width={75}
           height={75}
+          priority
           alt='plant'
           className='invisible 
         sm:visible sm:absolute sm:w-[85px] sm:-right-7 sm:-bottom-6 

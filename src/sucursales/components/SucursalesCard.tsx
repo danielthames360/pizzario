@@ -24,7 +24,7 @@ export const SucursalesCard = ({
         <h3 className='font-bold text-xl'>{branch.name}</h3>
         <Image
           className='w-10 h-10'
-          src='/images/favicon-logo.png'
+          src='/images/logo.png'
           alt='Pizza Rio Logo'
           width={50}
           height={50}
