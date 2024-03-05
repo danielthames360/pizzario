@@ -4,7 +4,7 @@ import { PedirYaButton, ScrollDownButton, TextoSucursal } from './'
 export const Hero = () => {
   return (
     <div
-      className='h-screen relative overflow-hidden
+      className='h-screen max-h-[-webkit-fill-available] sm:max-h-none relative overflow-hidden
     sm:h-[35vh] lg:h-[40vh] xl:h-[55vh]'
     >
       <div
@@ -18,7 +18,7 @@ export const Hero = () => {
       >
         {/* Contenedor del medio */}
         <div
-          className='h-[90vh] pt-10 flex flex-col justify-between items-center 
+          className='h-[78vh] pt-10 flex flex-col justify-between items-center 
         sm:h-full sm:pt-0 sm:flex-row sm:justify-center sm:gap-12
         md:justify-evenly md:gap-0
         lg:justify-around xl:gap-52'
@@ -26,7 +26,7 @@ export const Hero = () => {
           {/* LOGO */}
           <div
             className='flex flex-col justify-evenly 
-          sm:justify-stretch items-center gap-4 sm:gap-0
+          sm:justify-stretch items-center gap-2 sm:gap-0
           '
           >
             <Image
@@ -40,7 +40,7 @@ export const Hero = () => {
               xl:w-[150px]'
             />
 
-            <div className='flex flex-col gap-4 sm:gap-0'>
+            <div className='flex flex-col gap-2 sm:gap-0'>
               <Image
                 src={'/images/slogan.png'}
                 width={350}
@@ -91,8 +91,8 @@ export const Hero = () => {
           width={230}
           height={90}
           alt='dino'
-          className='absolute z-[-1] -rotate-[25deg] top-1/2 -translate-y-1/2 -right-24 h-[230px]
-          sm:-right-32 sm:top-20 sm:-rotate-[16deg]
+          className='absolute z-[-1] -rotate-[25deg] top-1/2 -translate-y-1/3 -right-32 h-[230px]
+          sm:-right-32 sm:top-20 sm:-rotate-[16deg] sm:-translate-y-1/2
           md:w-[280px] md:-rotate-[6deg] md:top-24
           lg:w-[350px] lg:h-[280px] lg:top-32
           xl:w-[380px] xl:h-[280px]'
