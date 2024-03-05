@@ -23,8 +23,12 @@ export const PedirYaButton = () => {
 
   if (sortedBranches == null || sortedBranches.length === 0) {
     return (
-      <button className='btn text-shadow' onClick={scrollDown}>
-        Pedir Ya!
+      <button className='btn mx-auto rounded-3xl text-white text-[1.4rem] text-shadow font-bold px-5 py-3
+      sm:text-[1rem]
+      lg:text-[1.3rem]
+      xl:text-[1.6rem]' 
+      onClick={scrollDown}>
+        ¡Pide ahora!
       </button>
     )
   }
@@ -32,10 +36,13 @@ export const PedirYaButton = () => {
   return (
     <>
       <button
-        className='btn text-shadow'
+        className='btn mx-auto rounded-3xl text-white text-[1.4rem] text-shadow font-bold px-5 py-3
+        sm:text-[1rem]
+        lg:text-[1.3rem]
+        xl:text-[1.6rem]'
         onClick={() => clickButtonPedirYa(sortedBranches[0].sucursalId)}
       >
-        Pedir Ya!
+        ¡Pide ahora!
       </button>
     </>
   )

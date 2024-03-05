@@ -9,8 +9,8 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb {
-  background-color: #f87171; /* Color del "thumb" de la barra de desplazamiento, cambia este color como lo necesites */
-  border-radius: 6px; /* Bordes redondeados para el "thumb" */
+  background-color: #c61a1a; /* Color del "thumb" de la barra de desplazamiento, cambia este color como lo necesites */
+  border-radius: 5px; /* Bordes redondeados para el "thumb" */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -18,38 +18,47 @@
 }
 
 .hero {
-  background-image: url(/images/bg-texturas.png);
-  background-size: contain;
-  background-position: top center;
-  /* background-repeat: no-repeat; */
-  height: 100vh;
+  background-image: url(/images/background-mob.jpg);
+  background-size: cover;
+  /* height: 100vh; */
   width: 100vw;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   position: absolute;
   z-index: -1;
 }
 
 .footer {
-  background-color: #ef0000;
-  background-image: url(/images/footer/texturasFooter.png);
+  background-image: url(/images/footer/background.png);
   background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.icon{
+  transition: all 1s ease;
+}
+.icon :hover{
+  transform: scale(1.1);
 }
 
 .btn {
-  border-radius: 50px;
+  border-radius: 22px;
   color: white;
-  font-size: 1.6rem;
-  font-weight: 700;
-  padding: 1rem 5rem;
+  /* font-size: 1.4rem; */
+  /* font-weight: 700; */
+  /* padding: .7rem 1rem; */
   flex-shrink: 0;
-  background: linear-gradient(93deg, #ef0000 -10.26%, #fde256 84.41%);
-  box-shadow: -1px 23px 50px 0 rgba(185, 44, 44, 0.46);
-  margin-bottom: 0.5rem;
+  background: rgb(206, 27, 25);
+  /* background: linear-gradient(93deg, #ef0000 -10.26%, #fde256 84.41%); */
+  /* box-shadow: -1px 23px 50px 0 rgba(185, 44, 44, 0.46); */
+  box-shadow: 3px 3px 2px .1px rgba(0, 0, 0, 0.232);
+  /* margin-bottom: 0.5rem; */
   transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  box-shadow: -1px 23px 50px 0 rgba(251, 107, 107, 0.46);
+  box-shadow: -1px 23px 50px 0 rgba(206, 27, 25, 0.46);
+  /* box-shadow: -1px 23px 50px 0 rgba(251, 107, 107, 0.46); */
   transform: scale(1.05);
 }
 
@@ -156,4 +165,26 @@
 .radio-custom:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5); /* sombra para el rojo-500 */
+}
+
+.animationPizza{
+  animation: animationPizza .7s infinite;
+}
+
+@keyframes animationPizza {
+  0% {
+    transform: translateY(-20px) rotate(-3deg);
+  }
+  10% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+  20% {
+    transform: translateX(5px) rotate(-8deg);
+  }
+  50% {
+    transform: translateX(7px) translateY(10px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(-20px) rotate(0deg);
+  }
 }
