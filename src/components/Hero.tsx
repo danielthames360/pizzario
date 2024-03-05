@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <div
       className='h-screen max-h-[-webkit-fill-available] sm:max-h-none relative overflow-hidden
-    sm:h-[35vh] lg:h-[40vh] xl:h-[55vh]'
+    sm:h-[35vh] lg:h-[40vh] xl:h-[52vh]'
     >
       <div
         className='hero h-full bg-left 
@@ -33,6 +33,7 @@ export const Hero = () => {
               src={'/images/logo.png'}
               width={90}
               height={90}
+              priority
               alt='logo'
               className='sm:w-[75px] 
               md:w-[85px]
@@ -77,7 +78,7 @@ export const Hero = () => {
               alt='deco'
               width={50}
               height={50}
-              className='absolute animationPizza bottom-7 -left-3 deco-animation
+              className='absolute animationPizza bottom-10 -left-3 deco-animation
           sm:w-[40px] sm:h-[60px] sm:bottom-1 sm:-left-3
           md:w-[50px] md:h-[70px] md:-left-4
           lg:w-[60px] lg:h-[80px] lg:-left-5
@@ -90,6 +91,7 @@ export const Hero = () => {
           src={'/images/dino.gif'}
           width={230}
           height={90}
+          priority
           alt='dino'
           className='absolute z-[-1] -rotate-[25deg] top-1/2 -translate-y-1/3 -right-32 h-[230px]
           sm:-right-32 sm:top-20 sm:-rotate-[16deg] sm:-translate-y-1/2
@@ -115,7 +117,7 @@ export const Hero = () => {
           width={110}
           height={110}
           alt='plant'
-          className='absolute -bottom-12 right-4
+          className='absolute -bottom-12 right-0
         sm:w-[60px] sm:-bottom-[3rem] sm:left-[19rem]
         md:left-1/2 md:-translate-x-1/2
         lg:w-[70px]'
