@@ -6,8 +6,11 @@ export const TextoSucursal = () => {
   if (!sortedBranches || sortedBranches.length === 0) return null
 
   return (
-    <p className='text-md font-bold text-[#444] lg:text-lg text-center sm:mt-1 z-50'>
-      Pedido desde {sortedBranches[0].name}
+    <p className='w-[80%] m-auto text-md font-bold text-[#444] text-center z-50 mt-1 
+     sm:mt-2
+     md:text-lg md:leading-5
+     xl:w-[90%] xl:text-xl'>
+      Desde {sortedBranches[0].name}
     </p>
   )
 }

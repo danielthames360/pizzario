@@ -30,6 +30,7 @@
 .footer {
   background-image: url(/images/footer/background.png);
   background-size: cover;
+  width: 100vw;
 }
 
 .icon {
@@ -55,7 +56,7 @@
 }
 
 .btn:hover {
-  box-shadow: -1px 23px 50px 0 rgba(206, 27, 25, 0.46);
+  box-shadow: -1px 10px 20px 0 rgba(206, 28, 25, 0.375);
   /* box-shadow: -1px 23px 50px 0 rgba(251, 107, 107, 0.46); */
   transform: scale(1.05);
 }

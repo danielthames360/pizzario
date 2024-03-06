@@ -5,20 +5,18 @@ import React from 'react'
 export const Footer = () => {
   return (
     <>
-      <div className='h-[45vh] w-full overflow-hidden bg-black'>
+      <div className='h-[28rem] w-full overflow-hidden bg-black'>
         <div className='relative h-[70%] w-full overflow-hidden footer'>
           <div className='overflow-hidden w-4/5 h-full mx-auto flex flex-col justify-around items-center '>
             <Image
               src={'/images/footer/rioLovers.png'}
-              width={1040}
-              height={780}
-              className='
-              mt-5
-                w-[180px]
-                sm:w-[240px]
-            md:w-[250px]
-            lg:w-[270px]
-            xl:w-[300px]'
+              width={980}
+              height={688}
+              className=' mt-5 w-[220px]
+              sm:w-[260px]
+              md:w-[280px]
+              lg:w-[300px]
+              xl:w-[340px]'
               alt='footer'
             />
 
@@ -40,9 +38,9 @@ export const Footer = () => {
                   <Image
                     src={'/images/footer/tiktok.png'}
                     alt='facebook'
-                    width={30}
-                    height={30}
-                    className='xl:w-[30px]'
+                    width={115}
+                    height={125}
+                    className='w-[30px]'
                   />
                 </a>
 
@@ -55,9 +53,9 @@ export const Footer = () => {
                   <Image
                     src={'/images/footer/facebook.png'}
                     alt='facebook'
-                    width={30}
-                    height={30}
-                    className='xl:w-[30px]'
+                    width={115}
+                    height={125}
+                    className='w-[30px]'
                   />
                 </a>
                 <a
@@ -69,9 +67,9 @@ export const Footer = () => {
                   <Image
                     src={'/images/footer/instagram.png'}
                     alt='facebook'
-                    width={30}
-                    height={30}
-                    className='xl:w-[33px]'
+                    width={115}
+                    height={125}
+                    className='w-[30px]'
                   />
                 </a>
               </div>
@@ -81,9 +79,9 @@ export const Footer = () => {
           <Image
             src={'/images/footer/blackPlant.png'}
             alt='deco'
-            width={100}
-            height={100}
-            className='absolute -bottom-9 right-0
+            width={502}
+            height={633}
+            className='absolute -bottom-9 right-0 w-[100px]
         sm:w-[110px] sm:-bottom-10 sm:right-[5%]
         md:w-[130px] md:-bottom-11
         lg:w-[150px] lg:-bottom-12 lg:right-[10%]
@@ -93,9 +91,9 @@ export const Footer = () => {
           <Image
             src={'/images/footer/blackPlants.png'}
             alt='deco'
-            width={100}
-            height={100}
-            className='absolute -bottom-8 left-0
+            width={599}
+            height={610}
+            className='absolute -bottom-8 left-0 w-[100px]
         sm:w-[140px] sm:-bottom-12
         md:w-[160px] md:left-16
         lg:w-[180px] lg:-bottom-14 lg:left-24

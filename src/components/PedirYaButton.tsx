@@ -36,10 +36,9 @@ export const PedirYaButton = () => {
   return (
     <>
       <button
-        className='btn mx-auto rounded-3xl text-white text-[1.4rem] text-shadow font-bold px-5 py-3
+        className='btn mx-auto mb-2 rounded-3xl text-white text-[1.4rem] text-shadow font-bold px-5 py-3
         sm:text-[1rem]
-        lg:text-[1.3rem]
-        xl:text-[1.6rem]'
+        lg:text-[1.3rem] lg:px-4 lg:py-2'
         onClick={() => clickButtonPedirYa(sortedBranches[0].sucursalId)}
       >
         ¡Pide ahora!
