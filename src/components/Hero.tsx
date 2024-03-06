@@ -12,11 +12,11 @@ export const Hero = () => {
       sm:bg-[url(/images/background.png)] sm:bg-center'
       ></div>
 
-      <div className='w-4/5 h-full mx-auto flex flex-col justify-center items-center '>
+      <div className='w-4/5 lg:w-4/6 h-full mx-auto flex flex-col justify-center items-center sm:justify-between'>
         {/* Contenedor del medio */}
         <div
           className='h-[80vh] flex flex-col justify-between items-center gap-4
-        sm:h-full sm:flex-row sm: sm:gap-12
+        sm:h-full sm:flex-row sm:justify-center sm:gap-12
         md:gap-20
         xl:gap-52'
         >
