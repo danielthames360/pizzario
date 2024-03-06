@@ -12,7 +12,7 @@ export const SucursalesList = () => {
   const branches = sortedBranches ?? originBranches
 
   return (
-    <div className='p-4 max-h-[55vh] w-[90vw] sm:w-[20rem] lg:w-[28rem] mx-auto sm:p-6 sm:max-h-screen overflow-auto transition-all'>
+    <div className='p-4 max-h-full w-[90vw] sm:w-[20rem] lg:w-[28rem] mx-auto sm:p-6 sm:max-h-screen overflow-auto transition-all'>
       {(!sortedBranches || sortedBranches.length === 0) && <RadioCity />}
 
       {branches &&

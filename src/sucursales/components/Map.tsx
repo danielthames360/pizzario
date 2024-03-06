@@ -88,45 +88,43 @@ export const Map = () => {
   }
 
   return (
-    <div className='flex-grow h-[70vh] sm:h-full pb-4 sm:pb-0'>
-      <GoogleMap
-        mapContainerClassName='w-[85vw] mx-auto h-full sm:w-full'
-        center={currentLocation || defaultCenter}
-        zoom={12}
-        options={{
-          streetViewControl: false,
-          styles: mapStyles
-        }}
-      >
-        {currentLocation && (
-          <Marker
-            position={currentLocation}
-            icon={{ url: '/images/icons/me-pin.png' }}
-          />
-        )}
-        {branches.map((sucursal) => (
-          <Marker
-            key={sucursal.name}
-            position={{ lat: sucursal.latitude, lng: sucursal.longitude }}
-            icon={{
-              url: '/images/icons/default.png'
-            }}
-            onClick={() => setActiveBranch(sucursal)}
-          />
-        ))}
+    <GoogleMap
+      mapContainerClassName='mx-auto h-full w-full'
+      center={currentLocation || defaultCenter}
+      zoom={12}
+      options={{
+        streetViewControl: false,
+        styles: mapStyles
+      }}
+    >
+      {currentLocation && (
+        <Marker
+          position={currentLocation}
+          icon={{ url: '/images/icons/me-pin.png' }}
+        />
+      )}
+      {branches.map((sucursal) => (
+        <Marker
+          key={sucursal.name}
+          position={{ lat: sucursal.latitude, lng: sucursal.longitude }}
+          icon={{
+            url: '/images/icons/default.png'
+          }}
+          onClick={() => setActiveBranch(sucursal)}
+        />
+      ))}
 
-        {activeBranch && (
-          <InfoWindow
-            position={{
-              lat: activeBranch.latitude,
-              lng: activeBranch.longitude
-            }}
-            onCloseClick={() => setActiveBranch(null)}
-          >
-            <SucursalesCard branch={activeBranch} fromMap={true} />
-          </InfoWindow>
-        )}
-      </GoogleMap>
-    </div>
+      {activeBranch && (
+        <InfoWindow
+          position={{
+            lat: activeBranch.latitude,
+            lng: activeBranch.longitude
+          }}
+          onCloseClick={() => setActiveBranch(null)}
+        >
+          <SucursalesCard branch={activeBranch} fromMap={true} />
+        </InfoWindow>
+      )}
+    </GoogleMap>
   )
 }

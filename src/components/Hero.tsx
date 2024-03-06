@@ -5,22 +5,18 @@ export const Hero = () => {
   return (
     <div
       className='h-screen max-h-[-webkit-fill-available] sm:max-h-none relative overflow-hidden
-    sm:h-[35vh] lg:h-[40vh] xl:h-[52vh]'
+    sm:h-[40vh] lg:h-[45vh] xl:h-[54vh]'
     >
       <div
         className='hero h-full bg-left 
       sm:bg-[url(/images/background.png)] sm:bg-center'
-      
       ></div>
 
-      <div
-        className='w-4/5 lg:w-4/6 mx-auto flex flex-col justify-center
-      sm:h-full'
-      >
+      <div className='w-4/5 lg:w-4/6 h-full mx-auto flex flex-col justify-center items-center'>
         {/* Contenedor del medio */}
         <div
-          className='h-[78vh] pt-10 flex flex-col justify-between items-center 
-        sm:h-full sm:pt-0 sm:flex-row sm:justify-center sm:gap-12
+          className='h-[80vh] flex flex-col justify-between items-center 
+        sm:h-full sm:flex-row sm:justify-center sm:gap-12
         md:justify-evenly md:gap-0
         lg:justify-around xl:gap-52'
         >
@@ -56,6 +52,7 @@ export const Hero = () => {
               />
 
               <PedirYaButton />
+              <TextoSucursal />
             </div>
           </div>
 
@@ -96,7 +93,7 @@ export const Hero = () => {
           height={90}
           priority
           alt='dino'
-          className='absolute z-[-1] -rotate-[25deg] top-1/2 -translate-y-1/3 -right-32 h-[230px]
+          className='absolute z-[-1] -rotate-[25deg] top-[45%] -right-32 h-[230px]
           sm:-right-32 sm:top-20 sm:-rotate-[16deg] sm:-translate-y-1/2
           md:w-[280px] md:-rotate-[6deg] md:top-24
           lg:w-[350px] lg:h-[280px] lg:top-32
@@ -134,8 +131,8 @@ export const Hero = () => {
           height={75}
           priority
           alt='plant'
-          className='invisible 
-        sm:visible sm:absolute sm:w-[85px] sm:-right-7 sm:-bottom-6 
+          className='invisible h-0 
+        sm:visible sm:h-auto sm:absolute sm:w-[85px] sm:-right-7 sm:-bottom-6 
         md:w-[90px] md:right-8 md:-bottom-7
         lg:w-[105px] lg:right-12 lg:-bottom-8
         xl:w-[130px] xl:right-20 xl:-bottom-12'
