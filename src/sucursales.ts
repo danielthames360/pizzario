@@ -134,6 +134,18 @@ export const sucursales: Sucursal[] = [
         sucursalId: "3ccd5c0d-fb56-4361-aaad-56917dda96c4",
     },
     {
+        name: "Sucursal Montero",
+        address:
+            "C. Ballivian 125, Montero",
+        phone: "75099129",
+        hours: "03:00 PM - 11:00 PM",
+        days: "Lun, Mar, Mie, Jue, Vie, Sab, Dom",
+        latitude: -17.339465,
+        longitude: -63.256481,
+        city: 'SCZ',
+        sucursalId: "8c9f57c5-9ff6-4bb8-851e-01891f40d42d"
+    },
+    {
         name: "Sucursal Mutualista",
         address:
             "Av. mutualista entre segundo y tercer anillo calle los mapajos, Santa Cruz",
