@@ -16,7 +16,7 @@ export const sucursales: Sucursal[] = [
         name: "Sucursal Alemana",
         address: "Av. Alemana entre 3er y 4to anillo, Santa Cruz",
         phone: "69006395",
-        hours: "03:00 PM - 11:00 PM",
+        hours: "10:00 AM - 11:00 PM",
         days: "Lun, Mar, Mie, Jue, Vie, Sab, Dom",
         latitude: -17.7552087,
         longitude: -63.1655194,
