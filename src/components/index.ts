@@ -4,3 +4,5 @@ export * from './Hero';
 export * from './PedirYaButton';
 export * from './ScrollDownButton';
 export * from './TextoSucursal';
+export * from './Modal';
+export * from './Banners';

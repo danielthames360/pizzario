@@ -38,10 +38,8 @@ export const Hero = () => {
               xl:w-[120px]'
             />
 
-            
-
             <div className='flex flex-col '>
-            <Image
+              <Image
                 src={'/images/slogan.png'}
                 priority
                 width={1228}
