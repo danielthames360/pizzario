@@ -16,7 +16,10 @@ export default function Home() {
         <Footer />
       </div>
       <Bubbles />
-      <Script src='' strategy='lazyOnload' />
+      <Script
+        src='https://www.fbgcdn.com/embedder/js/ewm2.js'
+        strategy='lazyOnload'
+      />
     </MapProvider>
   )
 }
