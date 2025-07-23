@@ -51,10 +51,10 @@ export const SucursalesCard = ({
       <div className='flex justify-between items-center mt-4'>
         {fromMap ? (
           <button
-            className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer'
+            className='bg-[#cc1c19] hover:bg-red-700 text-white font-bold py-2 px-4 rounded-3xl cursor-pointer'
             onClick={() => clickButtonPedirYa(branch.sucursalId)}
           >
-            Pedir Ya!
+            ¡Pide ahora!
           </button>
         ) : (
           <PedirYaCard id={branch.sucursalId} />
